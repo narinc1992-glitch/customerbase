@@ -1,0 +1,19 @@
+{
+  "name": "cmr-base",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CMR Base — ระบบจัดการลูกค้า (CRM) คล้ายความสามารถของ kintone: ระเบียน, ฟิลด์กำหนดเอง, มุมมอง, ขั้นตอนการขาย, REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check shared/seed.js && node --check js/ui.js && node --check js/csv.js && node --check js/auth.js && node --check js/store.js && node --check js/app.js",
+    "test": "node tests/api.test.mjs",
+    "test:auth": "node tests/auth.test.mjs",
+    "test:lifecycle": "node tests/lifecycle.test.mjs",
+    "test:all": "node tests/api.test.mjs && node tests/auth.test.mjs && node tests/lifecycle.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT"
+}
